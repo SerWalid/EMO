@@ -1,0 +1,83 @@
+{% extends "siderbar.html" %}
+{% block title %} EMO The Chatbot {% endblock %}
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/chatbot.css') }}">
+{% endblock %}
+
+{% block body %}
+<!-- Chat Container - Adjusted to account for sidebar -->
+<div class="flex flex-col  h-[700px] pl-64 overflow-y-auto">
+  <!-- Main Chat Area -->
+  <div class="flex-1 flex flex-col bg-gray-50 max-w-4xl mx-auto w-full">
+    <!-- Header -->
+    <div class="bg-white shadow-sm">
+      <div class="px-6 py-4 flex items-center justify-between">
+        <div class="flex items-center space-x-3">
+          <img class="h-10 w-10 rounded-full" src="{{ url_for('static', filename='images/AA.jpg') }}" alt="Beemo">
+          <span class="text-xl font-semibold text-gray-800">EMO</span>
+        </div>
+        <button id="new-chat" class="flex items-center space-x-2 px-4 py-2 rounded-lg bg-blue-50 text-blue-600 hover:bg-blue-100 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+          </svg>
+          <span>Start Over</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Chat Messages -->
+    <div id="chat-bubbles" class="flex-1 overflow-y-auto px-6 py-6"> 
+      <div class="space-y-6">
+        <!-- Welcome Message -->
+        <div class="flex items-start space-x-4">
+          <img class="w-10 h-10 rounded-full" src="{{ url_for('static', filename='images/AA.jpg') }}" alt="Beemo">
+          <div class="flex-1 bg-white rounded-2xl px-6 py-4 shadow-sm">
+            <h3 class="font-medium text-gray-900 mb-2">Hello, Friend! 👋</h3>
+            <p class="text-gray-700">
+              Hi there! I'm EMO, your friendly chatbot. Let's have some fun and learn new things together! What would you like to talk about?
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Input Area -->
+    <div class="border-t bg-white">
+      <div class="px-6 py-4">
+        <form id="chat-form" class="relative bg-gray-50 rounded-2xl shadow-sm">
+          <textarea
+            id="user-input"
+            rows="1"
+            class="w-full px-4 py-4 pr-20 text-gray-900 placeholder-gray-500 bg-transparent border-0 resize-none focus:ring-0 focus:outline-none"
+            placeholder="Type your message..."
+          ></textarea>
+          
+          <div class="absolute right-2 bottom-2 flex space-x-2">
+            <button
+              type="button"
+              id="mic-button"
+              class="p-2 text-gray-500 hover:text-blue-600 rounded-full hover:bg-blue-50 transition-colors"
+            >
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"></path>
+              </svg>
+            </button>
+            
+            <button
+              type="submit"
+              id="send-message"
+              class="p-2 text-white bg-blue-600 rounded-full hover:bg-blue-500 transition-colors"
+            >
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z"></path>
+              </svg>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="/static/js/chatbot.js"></script>
+{% endblock %}

@@ -1,0 +1,75 @@
+{% extends 'siderbar.html' %}
+
+{% block head %}
+    <title>AuraAI's Project</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/features.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+{% endblock %}
+
+{% block body %}
+<div class="main-content">
+    
+
+    <section class="features-grid">
+        <div class="feature-card" style="--delay: 0">
+            <div class="feature-icon-wrapper">
+                <i class="fas fa-robot"></i>
+            </div>
+            <a href="{{ url_for('chatbot') }}"> 
+            <h2>Mental Health Chatbot</h2>
+             </a>
+            <p>Engage with our AI companion for emotional support and guidance</p>
+            <div class="card-footer">
+                <span class="tag">AI Powered</span>
+                <a href="{{ url_for('chatbot') }}"> 
+                    <button class="explore-btn">Try Now</button>
+                </a>
+            </div>
+        </div>
+
+        <div class="feature-card" style="--delay: 1">
+            <div class="feature-icon-wrapper">
+                <i class="fas fa-gamepad"></i>
+            </div>
+            <h2>Interactive Games</h2>
+            <p>Enhance cognitive skills through engaging games</p>
+            <div class="card-footer">
+                <span class="tag">Educational</span>
+                <a href="{{ url_for('GameSelectTest') }}"> 
+                     <button class="explore-btn">Play</button>
+                </a>
+            </div>
+        </div>
+
+        <div class="feature-card" style="--delay: 2">
+            <div class="feature-icon-wrapper">
+                <i class="fas fa-music"></i>
+            </div>
+            <h2>Music Therapy</h2>
+            <p>Discover calming melodies for emotional balance</p>
+            <div class="card-footer">
+                <span class="tag">Therapeutic</span>
+                <a href="{{ url_for('Music') }}"> 
+                <button class="explore-btn">Listen</button>
+            </a>
+            </div>
+        </div>
+
+        <div class="feature-card" style="--delay: 3">
+            <div class="feature-icon-wrapper">
+                <i class="fas fa-heart-pulse"></i>
+            </div>
+            <h2>Emotion Learning</h2>
+            <p>Interactive lessons and quizzes for emotional intelligence</p>
+            <div class="card-footer">
+                <span class="tag">Learning</span>   
+                <a href="{{ url_for('LearnEmotions') }}"> 
+                <button class="explore-btn">Start</button>
+            </a>
+            </div>
+        </div>
+
+       
+    </section>
+</div>
+{% endblock %}

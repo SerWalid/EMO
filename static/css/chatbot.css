@@ -1,0 +1,105 @@
+/* General Styles */
+body {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  background-color: #f0f9ff;
+  overflow: hidden;  /* Disables scrolling on the whole page */
+}
+
+
+
+/* Chat Container */
+#chat-bubbles {
+   /* This sets the height correctly */
+  overflow-y: auto;             /* Allows scrolling only if content overflows */
+  scrollbar-color: #ffcc00 transparent;
+  z-index: 20;
+  background-color: #dadbdc;
+  border-radius: 10px;
+  padding: 10px;
+  box-sizing: border-box;
+  scrollbar-width: none; /* For Firefox */
+
+}
+
+
+/* Scrollbar styles */
+#chat-bubbles::-webkit-scrollbar {
+  width: 8px;
+}
+
+#chat-bubbles::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+#chat-bubbles::-webkit-scrollbar-thumb {
+  background-color: #ffcc00;
+  border-radius: 4px;
+}
+
+/* Make sure the chat container doesn't overflow the viewport */
+.chat-container {
+  
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  max-height: 400px; 
+}
+
+/* Input area - keep it fixed at bottom */
+.chat-input-container {
+  position: sticky;
+  bottom: 0;
+  z-index: 30;
+  background-color: #fff;
+  border-top: 2px solid #ffcc00;
+  padding: 10px;
+  overflow: auto;
+}
+
+/* Button Styles */
+button {
+  border-radius: 20px;
+  transition: background-color 0.3s ease;
+}
+
+#send-message {
+  background-color: #ffcc00;
+  color: #fff;
+}
+
+#send-message:hover {
+  background-color: #ff9900;
+}
+
+#mic-button {
+  background-color: #ffcc00;
+  color: #fff;
+}
+
+#mic-button:hover {
+  background-color: #ff9900;
+}
+
+/* Sidebar spacing */
+@media (min-width: 768px) {
+  .pl-64 {
+    padding-left: 16rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .pl-64 {
+    padding-left: 0;
+  }
+}
+
+/* Message Bubbles */
+.message-bubble {
+  transition: transform 0.2s ease;
+  z-index: 15;
+}
+
+.message-bubble:hover {
+  transform: translateY(-1px);
+  z-index: 25;
+}
