@@ -5,12 +5,9 @@ body {
   overflow: hidden;  /* Disables scrolling on the whole page */
 }
 
-
-
 /* Chat Container */
 #chat-bubbles {
    /* This sets the height correctly */
-  overflow-y: auto;             /* Allows scrolling only if content overflows */
   scrollbar-color: #ffcc00 transparent;
   z-index: 20;
   background-color: #dadbdc;
@@ -18,9 +15,7 @@ body {
   padding: 10px;
   box-sizing: border-box;
   scrollbar-width: none; /* For Firefox */
-
 }
-
 
 /* Scrollbar styles */
 #chat-bubbles::-webkit-scrollbar {
@@ -38,8 +33,6 @@ body {
 
 /* Make sure the chat container doesn't overflow the viewport */
 .chat-container {
-  
-  overflow: auto;
   display: flex;
   flex-direction: column;
   max-height: 400px; 
@@ -53,7 +46,6 @@ body {
   background-color: #fff;
   border-top: 2px solid #ffcc00;
   padding: 10px;
-  overflow: auto;
 }
 
 /* Button Styles */
