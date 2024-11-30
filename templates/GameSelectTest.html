@@ -2,30 +2,34 @@
 
 {% block head %}
 <title>Task Master</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/GameSelectTest.css') }}">
-
+<link rel="stylesheet" href="{{ url_for('static', filename='css/GameSelectTest.css') }}">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700&display=swap" rel="stylesheet">
 {% endblock %}
 
 {% block body %}
+<div class="welcome-message">
+  <h1>Welcome to Our Fun Zone! 🎉</h1>
+  <p>Explore exciting games and enhance your skills. Let's play and learn together!</p>
+</div>
 
-    <div class="CardsBody">
-    <a href="{{ url_for('MemoryGame') }}" alt="Mythrill">
-  <div class="card">
-    <div class="wrapper">
-      <img src="{{ url_for('static', filename='images/memoryGameB.jpg') }}" class="cover-image" />
+
+
+
+<div class="CardsBody">
+  <a href="{{ url_for('MemoryGame') }}" alt="Memory Game">
+    <div class="card">
+      <div class="wrapper">
+        <img src="{{ url_for('static', filename='images/MemG.jpg') }}" class="cover-image" />
+      </div>
     </div>
-  </div>
-</a>
+  </a>
 
-    <a href="{{ url_for('chess') }}" alt="Mythrill" >
-  <div class="card">
-    <div class="wrapper">
-      <img src="{{ url_for('static', filename='images/chessBack.jpg') }}" class="cover-image" />
+  <a href="{{ url_for('chess') }}" alt="Chess Game">
+    <div class="card">
+      <div class="wrapper">
+        <img src="{{ url_for('static', filename='images/chessBack.jpg') }}" class="cover-image" />
+      </div>
     </div>
-  </div>
-</a>
-
-
-
-     </div>
+  </a>
+</div>
 {% endblock %}

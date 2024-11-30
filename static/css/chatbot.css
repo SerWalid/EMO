@@ -1,17 +1,27 @@
 /* General Styles */
 body {
   font-family: 'Comic Sans MS', cursive, sans-serif;
-  background-color: #f0f9ff;
+  background-color: #E6F3FF;
   overflow: hidden;  /* Disables scrolling on the whole page */
 }
 
 /* Chat Container */
 #chat-bubbles {
    /* This sets the height correctly */
-  scrollbar-color: #ffcc00 transparent;
+  scrollbar-color: #FFEB3B transparent;
   z-index: 20;
-  background-color: #dadbdc;
-  border-radius: 10px;
+  background-color: #E6F3FF;
+  background-image: 
+  radial-gradient(
+    circle at 20% 100%,
+    rgba(230, 243, 255, 0.4) 0%,
+    rgba(202, 228, 255, 0.4) 33%,
+    rgba(176, 214, 255, 0.4) 66%,
+    rgba(150, 200, 255, 0.4) 66%
+  ),
+  linear-gradient(40deg, #E6F3FF, #CAE4FF, #B0D6FF, #96C8FF);
+
+  border-radius: 35px;
   padding: 10px;
   box-sizing: border-box;
   scrollbar-width: none; /* For Firefox */
@@ -27,7 +37,7 @@ body {
 }
 
 #chat-bubbles::-webkit-scrollbar-thumb {
-  background-color: #ffcc00;
+  background-color: #FFEB3B;
   border-radius: 4px;
 }
 
@@ -44,7 +54,7 @@ body {
   bottom: 0;
   z-index: 30;
   background-color: #fff;
-  border-top: 2px solid #ffcc00;
+  border-top: 2px solid #FFEB3B;
   padding: 10px;
 }
 
@@ -55,21 +65,21 @@ button {
 }
 
 #send-message {
-  background-color: #ffcc00;
+  background-color: #FFEB3B;
   color: #fff;
 }
 
 #send-message:hover {
-  background-color: #ff9900;
+  background-color: #FFB74D;
 }
 
 #mic-button {
-  background-color: #ffcc00;
+  background-color: #FFEB3B;
   color: #fff;
 }
 
 #mic-button:hover {
-  background-color: #ff9900;
+  background-color: #FFB74D;
 }
 
 /* Sidebar spacing */

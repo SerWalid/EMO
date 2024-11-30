@@ -33,7 +33,7 @@ def index():
 
 @app.route('/LearnEmotions')
 def LearnEmotions():
-    return render_template('LearnEmotions.html')
+    return render_template('Vision.html')
 @app.route('/Music')
 def Music():
     return render_template('Music.html')
@@ -137,7 +137,7 @@ def analyze_image():
                 ],
             }
         ],
-        model="llava-v1.5-7b-4096-preview",
+        model="llama-3.2-11b-vision-preview",
     )
 
     # Get the response

@@ -109,4 +109,89 @@
   transform: translate3d(0%, -30%, 100px);
 }
 
+body {
+  font-family: 'Baloo 2', cursive, sans-serif;
+  background-color: #FFFAE3;
+  overflow: hidden;
+}
+
+.CardsBody {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  background-color: #FFF3B0;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  width: 200px;
+  height: 300px;
+  position: relative;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.cover-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+@keyframes float {
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(-10px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
+}
+
+.card:hover .cover-image {
+  animation: float 3s ease-in-out infinite;
+}
+
+.welcome-message {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+  font-family: 'Baloo 2', cursive, sans-serif;
+  position:relative;
+  left:320px;
+}
+
+.welcome-message h1 {
+  font-size: 2.5rem;
+  color: #FF6F61;
+}
+
+.welcome-message p {
+  font-size: 1.2rem;
+  color: #555;
+}
+
 

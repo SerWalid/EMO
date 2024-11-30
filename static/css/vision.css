@@ -1,6 +1,3 @@
-
-
-
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 .form-container {
@@ -130,42 +127,44 @@
 	z-index: 1;
 }
 
- #output-container {
-    margin-top: 20px; /* Ensure it appears with a gap below the form */
-    display: none; /* Hidden by default */
-    width: 50%;
-    background: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
+#output-container {
+    display: none; /* Initially hidden */
     padding: 20px;
-    font-family: 'Roboto', sans-serif;
-    transition: all 0.3s ease-in-out;
-	 position: relative;
-	 margin-left: -200px;
-	 right:100px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    transition: all 0.3s ease;
+    max-width: 500px; /* Set a maximum width */
+	
+    margin-left: auto; /* Center the container */
+    margin-right: auto; /* Center the container */
+	position: relative;
+	right: 250px;
 }
 
-    /* Heading style */
-    #output-container h3 {
-        font-size: 18px;
-        font-weight: 500;
-        color: #333;
-        margin-bottom: 15px;
-    }
+#output-container.success {
+    background-color: #e0f7fa;
+    border-left: 5px solid #00796b;
+}
 
-    /* Message text style */
-    #output-message {
-        font-size: 16px;
-        line-height: 1.5;
-        color: #555;
-    }
+#output-container.error {
+    background-color: #ffebee;
+    border-left: 5px solid #c62828;
+}
 
-    /* Success message style */
-    #output-container.success {
-        border-left: 5px solid #28a745;
-    }
+.output-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
 
-    /* Error message style */
-    #output-container.error {
-        border-left: 5px solid #dc3545;
-    }
+.output-header .material-icons-outlined {
+    font-size: 24px;
+    margin-right: 10px;
+    color: #00796b; /* Change color based on success or error */
+}
+
+#output-message {
+    font-size: 1rem;
+    color: #333;
+}

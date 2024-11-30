@@ -94,7 +94,7 @@ function addUserMessage(message) {
   const chatBubbles = document.getElementById("chat-bubbles");
   const userBubble = document.createElement("li");
   userBubble.className =
-    "max-w-2xl ms-auto flex justify-end gap-x-2 sm:gap-x-4";
+    "max-w-2xl ms-auto flex justify-end gap-x-2 sm:gap-x-4 mt-4";
   userBubble.innerHTML = `
       <div class="grow text-end space-y-3">
         <div class="inline-block bg-blue-600 rounded-lg p-2 shadow-sm">
@@ -102,7 +102,7 @@ function addUserMessage(message) {
         </div>
       </div>
       <span class="shrink-0 inline-flex items-center justify-center size-[38px] rounded-md bg-gray-600">
-        <span class="text-sm font-medium text-white leading-none">AZ</span>
+        <span class="text-sm font-medium text-white leading-none">KID</span>
       </span>
     `;
   chatBubbles.appendChild(userBubble);
@@ -116,24 +116,14 @@ function addBotMessage(message) {
   responseBubble.className = "flex gap-x-2 sm:gap-x-4";
   responseBubble.innerHTML = `
       <span class="inline-flex justify-center items-center w-[38px] h-[38px] rounded-md bg-[#63bda4] overflow-hidden">
-        <img src="./static/images/AA.jpg" alt="" class="object-contain w-full h-full" />
+        <img src="./static/images/EmoImg.png" alt="" class="object-contain w-full h-full" />
       </span>
       <div class="grow max-w-[90%] md:max-w-2xl w-full space-y-3">
-        <div class="bg-blue-50 border border-blue-200 rounded-lg p-4 space-y-3 white:bg-neutral-900 white:border-neutral-700">
+<div class="bg-white border border-white-200 rounded-lg p-4 space-y-3 white:bg-neutral-900 white:border-neutral-700">
           <p class="text-sm text-gray-800">${message}</p>
         </div>
         <div>
-          <div class="sm:flex sm:justify-between">
-            <div class="mt-1 sm:mt-0">
-              <button type="button" class="py-2 px-3 inline-flex items-center gap-x-2 text-sm rounded-full border border-transparent text-gray-500 hover:bg-gray-50 focus:outline-none focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none">
-                <svg class="size-3.5" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                  <path fill-rule="evenodd" d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z"/>
-                  <path d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z"/>
-                </svg>
-                New answer
-              </button>
-            </div>
-          </div>
+          
         </div>
       </div>
     `;
@@ -150,10 +140,10 @@ function addLoadingBubble() {
   loadingBubble.className = "flex gap-x-2 sm:gap-x-4";
   loadingBubble.innerHTML = `
       <span class="inline-flex justify-center items-center w-[38px] h-[38px] rounded-md bg-[#63bda4] overflow-hidden">
-        <img src="./static/images/AA.jpg" alt="" class="object-contain w-full h-full" />
+        <img src="./static/images/EmoImg.png" alt="" class="object-contain w-full h-full" />
       </span>
       <div class="bg-white border border-gray-200 rounded-lg p-4 space-y-3 white:bg-neutral-900">
-        <p class="text-sm text-gray-800 ">Temo is typing...</p>
+        <p class="text-sm text-gray-800 ">EMO is typing...</p>
       </div>
     `;
   chatBubbles.appendChild(loadingBubble);

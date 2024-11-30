@@ -1,5 +1,4 @@
 @import url("https://uwhealth.github.io/Nu-Connect/uconnect_assets/css/main.css");
-@charset "UTF-8";
 .wrapper {
   padding: 3rem 1.5rem;
   max-width: 800px;
@@ -129,4 +128,33 @@
 
 .txt_faded {
   opacity: 0.65;
+}
+
+.card_label {
+  font-size: 1.2rem;
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Baloo 2', cursive, sans-serif;
+}
+
+.card_body {
+  background-color: #f0f9ff;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card_body canvas {
+  max-width: 100%;
+  height: auto;
+}
+
+.h6.color_label {
+  font-size: 1.5rem;
+  color: #FF6F61;
+  margin-bottom: 20px;
+  text-align: center;
+  font-family: 'Baloo 2', cursive, sans-serif;
 }
