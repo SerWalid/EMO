@@ -81,7 +81,7 @@ def get_llm_response(prompt):
     stream = client.chat.completions.create(
         messages=[
             {"role": "system",
-             "content": "You are Temo, a compassionate and supportive mental health assistant."},
+             "content": "You are EMO, a compassionate and supportive mental health assistant."},
             {"role": "user", "content": prompt}
         ],
         model="llama-3.1-8b-instant",
@@ -127,7 +127,7 @@ def analyze_image():
             {
                 "role": "user",
                 "content": [
-                    {"type": "text", "text": "What's in this image?"},
+                    {"type": "text", "text": "Analyze emotions from the image for kids. Please provide a short response."},
                     {
                         "type": "image_url",
                         "image_url": {
